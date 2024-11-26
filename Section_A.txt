@@ -1,0 +1,76 @@
+
+
+1. What is full meaning of SQL
+
+SQL - Structured Query Language. 
+
+It is a language for managing and manipulating relational databases. SQL is used for querying, inserting, updating, and deleting data, and also managing database structures like tables and indexes.
+
+
+
+
+
+
+2. List and explain four SQL Data Types
+
+---- INT (Integer)
+This is used to store whole numbers either positive, negative, or zero.
+Example: age INT stores the age of a person and can be equal to 30.
+
+
+---- VARCHAR (Variable Character)
+This is used to store variable length strings. The maximum length is specified during the table creation.
+Example: name VARCHAR(50) can store a string up to 50 characters
+
+
+---- DATE
+Date is used to store date values in the format YYYY-MM-DD (e.g., 1995-11-26).
+Example: birth_date DATE stores a person's birth date.
+
+
+---- DECIMAL (or NUMERIC)
+This is used to store exact numeric values with a specified number of digits before and after the decimal point. Example: price DECIMAL(10, 2) stores values like 99999.99 (with 2 decimal places).
+
+
+
+
+
+
+3. List and explain any three agregate functions that you know
+
+---- COUNT()
+
+Function COUNT() will returns the number of rows that match a specified condition. It counts all rows, including those with NULL values.33
+Example: SELECT COUNT(*) FROM employees; — It will count the total number of rows in the "employees" table.
+
+---- SUM()
+This is used to calculates the total sum of a numeric column.
+Example: SELECT SUM(salary) FROM employees WHERE department_id = 3; — The total salary of employees in department 3 will be returned
+
+---- AVG()
+Whenever AVG() is used, this will returns the average values.
+Example: SELECT AVG(salary) FROM employees; — Returns the average salary of all employees.
+
+
+
+
+
+
+4. There are various categories of SQL commands available under structured query language. List and explain in detail all the categories with at least 2 examples
+
+
+---- Data Query Language (DQL)
+
+This deals with querying the database to retrieve data. The most commonly used command in DQL is the SELECT statement.
+
+Examples:
+SELECT * FROM employees; — It will retrieves all columns and rows from the "employees" table.
+SELECT name, salary FROM employees WHERE department = 'SQI'; — This will retrieve the name and salary of employees working in the SQI department
+
+
+---- Data Manipulation Language (DML)
+It is used for inserting, updating, or deleting data, basically to manipulate data inside tables.
+
+Examples:
+INSERT INTO employees (id, name, salary) VALUES (1, 'Oluwatosin', 50000); — Inserts a new employee record.
+UPDATE employees SET salary = 60000 WHERE id = 1; — Updates the salary of the employee with ID 1.

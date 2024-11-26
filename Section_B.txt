@@ -1,0 +1,27 @@
+Given employees' table that looks like this, write querie to handle the following
+
+Employee_ID  Full_Name             Job_Title          Department      Business_Unit          Gender       Ethnicity   Annua_salary     Age
+E02002       Kai Le               Control Engineer     Engineering      Manufacturing         Male         Asian      9333456          47
+E02003       Robert Patel          Director           Engineering       Corporate              Male         Black      85708          58
+E02004       Cameron Lo             Analyst            Marketing        Research               Male         Asian      70345          64
+E02005       Harper Castillo         IT System          IT               Corporate             Female         Black      80900         39
+E02006       Ezra Vu               Director           Engineering        Corporate              Female         Latino      91023        42
+E02007       Jade Hu               Sr. Analyst          IT              Manufacturing            Male         Asian      85890          62
+E02008       Harper Chang          Analyst II          Marketing         Product                 Female         Black      43600          58
+E02009       James John            Network Admin        IT               Research                 Male         Black      45000         61
+
+
+
+1. UPDATE employees SET Ethnicity = 'African' WHERE Ethnicity = 'Black';
+2. DELETE FROM employees WHERE Employee_ID = 'E02002' OR Employee_ID = 'E02005' OR Employee_ID = 'E02006' OR Employee_ID = 'E02007';
+3. SELECT * FROM employees WHERE Gender = 'Female' AND Ethnicity = 'Asian' ORDER BY Full_Name DESC;
+4. UPDATE employees SET Job_Title = 'Sr. Manager' WHERE Employee_ID = 'E02008';
+5. DELETE FROM employees WHERE Age > 60;
+6. SELECT UPPER(Full_Name) AS Full_Name, Department FROM employees WHERE Department = 'IT' OR Department = 'Marketing' OR Department = 'Engineering' ORDER BY Full_Name ASC;
+7. SELECT Full_Name, Annual_salary FROM employees WHERE Annual_salary > 70000 AND Full_Name NOT IN ('Kai Le', 'Ezra Vu', 'Jade Hu');
+8. SELECT 'Hello, my name is ' || Full_Name || '. I am a director in the ' || Department || ' department. My business unit is ' || Business_Unit || ' and I am ' || Age || ' years old.' AS Introduction FROM employees WHERE Job_Title = 'Director' ORDER BY Full_Name ASC;
+
+
+ 
+
+
